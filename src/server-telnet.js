@@ -3,6 +3,8 @@
 import net from 'net';
 import superscript from 'superscript';
 
+var countdown = require('node-timers/countdown');
+
 const sockets = [];
 
 const botHandle = function botHandle(err, bot) {
@@ -25,7 +27,7 @@ const botHandle = function botHandle(err, bot) {
 
       soc.write(`\n> ${reply.string}\n`);
       soc.write('> ');
-    });
+    }, {ws: socket});
   };
 
   const closeSocket = function closeSocket(socket, bot) {

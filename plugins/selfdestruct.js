@@ -3,12 +3,26 @@ exports.setDestruct= function setDestruct(tm, cb) {
     var timer = countdown({
         startTime:tm*60000,
         pollInterval:60000
-    });
-    console.log(cb.userId);
-    timer.on('poll', function() {
-        console.log("timer called");
-        //this.bot.reply(userId,messageString,callback);
+    }),
+    that = this;
+    timer.on('poll', function(time) {
+        // this is experimental. I am calling superscript's directReply method to push a reply to the user on a new topic
+        // there is the possibility that this code can cause strange behaviors by forking the conversation
+        // also watch for a potential memory leak
+        // thanks to @silentrob and @benhjames for all their help
+        // TODO: handle error if the user session doesn't exist anymore
+        that.bot.directReply(that.user.id,"sometopic", "SOMETHING", function(err, reply) {
+            var response = 'THE SHIP WILL DETONATE IN T MINUS '+millisToMinutesAndSeconds(time)+' MINUTES.';
+            that.extraScope.ws.write(`\n> ${response}\n`);
+            that.extraScope.ws.write('> ');
+        });
     });
     timer.start();
-    cb(null,'THE EMERGENCY DESTRUCT SYSTEM IS NOW ACTIVATED. THE SHIP WILL DETONATE IN T MINUS ' + tm + ' MINUTES.')
+    cb(null,'THE EMERGENCY DESTRUCT SYSTEM IS NOW ACTIVATED. THE SHIP WILL DETONATE IN T MINUS ' + tm + ':00 MINUTES.')
+}
+
+function millisToMinutesAndSeconds(millis) {
+  var minutes = Math.floor(millis / 60000);
+  var seconds = ((millis % 60000) / 1000).toFixed(0);
+  return (seconds == 60 ? (minutes+1) + ":00" : minutes + ":" + (seconds < 10 ? "0" : "") + seconds);
 }
