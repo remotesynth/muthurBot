@@ -1,0 +1,18 @@
+{
+  "name": "motherBot",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "node-timers": "0.0.2",
+    "superscript": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0"
+  },
+  "scripts": {
+    "build": "babel src --presets babel-preset-es2015 --out-dir lib",
+    "parse": "parse -f",
+    "start-telnet": "npm run build && node lib/server-telnet.js"
+  }
+}
