@@ -2,139 +2,43 @@
     "topics": {
         "random": {
             "name": "random",
-            "flags": {
-                "keep": "keep"
-            },
+            "flags": {},
             "keywords": [],
             "filter": null,
             "gambits": [
-                "7YujUc1G",
-                "l5Z4A0Eq",
-                "CZje041d",
-                "Bbod2pGV",
-                "tESjrrVl",
-                "CwemsmUO",
-                "jPlLMHBd",
-                "LkJuSVOq",
-                "6THsbHyO"
+                "STJtU38z",
+                "jVl0T97y",
+                "Ze8dZ4jc"
+            ]
+        },
+        "command": {
+            "name": "command",
+            "flags": {},
+            "keywords": [],
+            "filter": null,
+            "gambits": [
+                "SXqwEepi",
+                "iqOCDgTV",
+                "biHRqySe",
+                "S2aryiMg",
+                "sY2bYIYy",
+                "hKY766MJ",
+                "XI46riTX"
+            ]
+        },
+        "selfdestruct": {
+            "name": "selfdestruct",
+            "flags": {},
+            "keywords": [],
+            "filter": null,
+            "gambits": [
+                "IKJWXn2y",
+                "TP2NSDVK"
             ]
         }
     },
     "gambits": {
-        "7YujUc1G": {
-            "trigger": {
-                "flags": {},
-                "filter": null,
-                "question": false,
-                "raw": "request clarification on science inability to neutralize alien",
-                "clean": "request clarification on science inability to neutralize alien"
-            },
-            "replies": [
-                "Ll9pb465"
-            ],
-            "conditional": null,
-            "conversation": null,
-            "topic": "random"
-        },
-        "l5Z4A0Eq": {
-            "trigger": {
-                "flags": {},
-                "filter": null,
-                "question": false,
-                "raw": "request enhancement",
-                "clean": "request enhancement"
-            },
-            "replies": [
-                "jTiZ8Yxi"
-            ],
-            "conditional": null,
-            "conversation": [
-                "Ll9pb465"
-            ],
-            "topic": "random"
-        },
-        "CZje041d": {
-            "trigger": {
-                "flags": {},
-                "filter": null,
-                "question": false,
-                "raw": "emergency command override 100375",
-                "clean": "emergency command override 100375"
-            },
-            "replies": [
-                "B34txQH8"
-            ],
-            "conditional": null,
-            "conversation": [
-                "jTiZ8Yxi"
-            ],
-            "topic": "random"
-        },
-        "Bbod2pGV": {
-            "trigger": {
-                "flags": {},
-                "filter": null,
-                "question": false,
-                "raw": "what is special order 937",
-                "clean": "what is special order 937"
-            },
-            "replies": [
-                "UJpVL7ws"
-            ],
-            "conditional": null,
-            "conversation": [
-                "B34txQH8"
-            ],
-            "topic": "random"
-        },
-        "tESjrrVl": {
-            "trigger": {
-                "flags": {},
-                "filter": null,
-                "question": false,
-                "raw": "*",
-                "clean": "(?:(?=^|\\s)\\s*(?:.*)(?=\\s|$)\\s*)?"
-            },
-            "replies": [
-                "f0R4p0Eg"
-            ],
-            "conditional": null,
-            "conversation": [
-                "jTiZ8Yxi"
-            ],
-            "topic": "random"
-        },
-        "CwemsmUO": {
-            "trigger": {
-                "flags": {},
-                "filter": null,
-                "question": false,
-                "raw": "when is the sun coming up",
-                "clean": "when is the sun coming up"
-            },
-            "replies": [
-                "n6394R0l"
-            ],
-            "conditional": null,
-            "conversation": null,
-            "topic": "random"
-        },
-        "jPlLMHBd": {
-            "trigger": {
-                "flags": {},
-                "filter": null,
-                "question": false,
-                "raw": "set timer *1",
-                "clean": "set timer\\s*((?:[^\\s]+\\s+){0,0}(?:[^\\s]+))\\s*"
-            },
-            "replies": [
-                "IedDbbKP"
-            ],
-            "conditional": null,
-            "conversation": null,
-            "topic": "random"
-        },
-        "LkJuSVOq": {
+        "STJtU38z": {
             "trigger": {
                 "flags": {},
                 "filter": null,
@@ -143,13 +47,13 @@
                 "clean": "decipher transmission"
             },
             "replies": [
-                "dZ8Un5xi"
+                "t8Fct23R"
             ],
             "conditional": null,
             "conversation": null,
             "topic": "random"
         },
-        "6THsbHyO": {
+        "jVl0T97y": {
             "trigger": {
                 "flags": {},
                 "filter": null,
@@ -158,62 +62,235 @@
                 "clean": "any suggestions"
             },
             "replies": [
-                "FUbeMcGW"
+                "l5sAyJDw"
             ],
             "conditional": null,
             "conversation": null,
             "topic": "random"
+        },
+        "Ze8dZ4jc": {
+            "trigger": {
+                "flags": {},
+                "filter": null,
+                "question": false,
+                "raw": "when is the sun coming up",
+                "clean": "when is the sun coming up"
+            },
+            "replies": [
+                "CaU4tcxy"
+            ],
+            "conditional": null,
+            "conversation": null,
+            "topic": "random"
+        },
+        "SXqwEepi": {
+            "trigger": {
+                "flags": {},
+                "filter": null,
+                "question": false,
+                "raw": "access code *1",
+                "clean": "access code\\s*((?:[^\\s]+\\s+){0,0}(?:[^\\s]+))\\s*"
+            },
+            "replies": [
+                "9jqmD75g"
+            ],
+            "conditional": null,
+            "conversation": null,
+            "topic": "command"
+        },
+        "iqOCDgTV": {
+            "trigger": {
+                "flags": {},
+                "filter": null,
+                "question": false,
+                "raw": "what is my access code",
+                "clean": "what is my access code"
+            },
+            "replies": [
+                "FPDyoOkF"
+            ],
+            "conditional": null,
+            "conversation": null,
+            "topic": "command"
+        },
+        "biHRqySe": {
+            "trigger": {
+                "flags": {},
+                "filter": null,
+                "question": false,
+                "raw": "request clarification on science inability to neutralize alien",
+                "clean": "request clarification on science inability to neutralize alien"
+            },
+            "replies": [
+                "rOOBqodg"
+            ],
+            "conditional": null,
+            "conversation": null,
+            "topic": "command"
+        },
+        "S2aryiMg": {
+            "trigger": {
+                "flags": {},
+                "filter": null,
+                "question": false,
+                "raw": "request enhancement",
+                "clean": "request enhancement"
+            },
+            "replies": [
+                "UrPJND4k"
+            ],
+            "conditional": null,
+            "conversation": [
+                "rOOBqodg"
+            ],
+            "topic": "command"
+        },
+        "sY2bYIYy": {
+            "trigger": {
+                "flags": {},
+                "filter": null,
+                "question": false,
+                "raw": "emergency command override 100375",
+                "clean": "emergency command override 100375"
+            },
+            "replies": [
+                "qUlLdQEA"
+            ],
+            "conditional": null,
+            "conversation": [
+                "UrPJND4k"
+            ],
+            "topic": "command"
+        },
+        "hKY766MJ": {
+            "trigger": {
+                "flags": {},
+                "filter": null,
+                "question": false,
+                "raw": "what is special order 937",
+                "clean": "what is special order 937"
+            },
+            "replies": [
+                "f2Z8ee3q"
+            ],
+            "conditional": null,
+            "conversation": [
+                "qUlLdQEA"
+            ],
+            "topic": "command"
+        },
+        "XI46riTX": {
+            "trigger": {
+                "flags": {},
+                "filter": null,
+                "question": false,
+                "raw": "*",
+                "clean": "(?:(?=^|\\s)\\s*(?:.*)(?=\\s|$)\\s*)?"
+            },
+            "replies": [
+                "eo0HxeXj"
+            ],
+            "conditional": null,
+            "conversation": [
+                "UrPJND4k"
+            ],
+            "topic": "command"
+        },
+        "IKJWXn2y": {
+            "trigger": {
+                "flags": {},
+                "filter": null,
+                "question": false,
+                "raw": "set timer *1",
+                "clean": "set timer\\s*((?:[^\\s]+\\s+){0,0}(?:[^\\s]+))\\s*"
+            },
+            "replies": [
+                "dnv3PLm9"
+            ],
+            "conditional": null,
+            "conversation": null,
+            "topic": "selfdestruct"
+        },
+        "TP2NSDVK": {
+            "trigger": {
+                "flags": {},
+                "filter": null,
+                "question": false,
+                "raw": "I've turned all the cooling units back on",
+                "clean": "I have turned all the cooling units back on"
+            },
+            "replies": [
+                "7W3zDyHy"
+            ],
+            "conditional": null,
+            "conversation": null,
+            "topic": "selfdestruct"
         }
     },
     "replies": {
-        "Ll9pb465": {
-            "string": "UNABLE TO CLARIFY",
-            "filter": null,
-            "keep": false
-        },
-        "jTiZ8Yxi": {
-            "string": "NO FURTHER ENHANCEMENT SPECIAL ORDER 937 SCIENCE OFFICER EYES ONLY",
-            "filter": null,
-            "keep": false
-        },
-        "B34txQH8": {
-            "string": "ACKNOWLEDGED",
-            "filter": null,
-            "keep": false
-        },
-        "UJpVL7ws": {
-            "string": "NOSTROMO REROUTED TO INVESTIGATE LIFE FORM\\nINVESTIGATE LIFE FORM. GATHER SPECIMEN.\\nPRIORITY ONE\\nINSURE RETURN OF ORGANISM FOR ANALYSIS\\nALL OTHER CONSIDERATIONS SECONDARY\\nCREW EXPENDABLE",
-            "filter": null,
-            "keep": false
-        },
-        "f0R4p0Eg": {
-            "string": "COMMAND NOT RECOGNIZED",
-            "filter": null,
-            "keep": false
-        },
-        "n6394R0l": {
-            "string": "^getSunrise()",
-            "filter": null,
-            "keep": false
-        },
-        "IedDbbKP": {
-            "string": "^setDestruct(<cap>)",
-            "filter": null,
-            "keep": false
-        },
-        "dZ8Un5xi": {
+        "t8Fct23R": {
             "string": "will do",
             "filter": null,
             "keep": false
         },
-        "FUbeMcGW": {
+        "l5sAyJDw": {
             "string": "still collating",
+            "filter": null,
+            "keep": false
+        },
+        "CaU4tcxy": {
+            "string": "^getSunrise()",
+            "filter": null,
+            "keep": false
+        },
+        "9jqmD75g": {
+            "string": "COMMAND PRIORITY ACCESS ONLY. YOUR ACCESS CODE HAS BEEN AUTHORIZED. ^save(\"accesscode\",<cap>)",
+            "filter": null,
+            "keep": false
+        },
+        "FPDyoOkF": {
+            "string": "^accessCode()",
+            "filter": null,
+            "keep": "keep"
+        },
+        "rOOBqodg": {
+            "string": "UNABLE TO CLARIFY",
+            "filter": null,
+            "keep": false
+        },
+        "UrPJND4k": {
+            "string": "NO FURTHER ENHANCEMENT SPECIAL ORDER 937 SCIENCE OFFICER EYES ONLY",
+            "filter": null,
+            "keep": false
+        },
+        "qUlLdQEA": {
+            "string": "ACKNOWLEDGED",
+            "filter": null,
+            "keep": false
+        },
+        "f2Z8ee3q": {
+            "string": "NOSTROMO REROUTED TO INVESTIGATE LIFE FORM\\nINVESTIGATE LIFE FORM. GATHER SPECIMEN.\\nPRIORITY ONE\\nINSURE RETURN OF ORGANISM FOR ANALYSIS\\nALL OTHER CONSIDERATIONS SECONDARY\\nCREW EXPENDABLE",
+            "filter": null,
+            "keep": false
+        },
+        "eo0HxeXj": {
+            "string": "COMMAND NOT RECOGNIZED",
+            "filter": null,
+            "keep": false
+        },
+        "dnv3PLm9": {
+            "string": "^setDestruct(<cap>)",
+            "filter": null,
+            "keep": false
+        },
+        "7W3zDyHy": {
+            "string": "TOO LATE FOR REMEDIAL ACTION. THE CORE HAS BEGUN TO MELT.",
             "filter": null,
             "keep": false
         }
     },
     "checksums": {
-        "./chat/main.ss": "4ef3220db8bc244243b18e3aec555a4b263c44b7"
+        "./chat/main.ss": "205aaa54c9871aa8991c8eda9d4feff44db2d89c"
     },
     "version": 1
 }

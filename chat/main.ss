@@ -1,3 +1,15 @@
+> topic random
++ when is the sun coming up
+- ^getSunrise()
+< topic
+
+> topic command
++ access code *1
+-  COMMAND PRIORITY ACCESS ONLY. YOUR ACCESS CODE HAS BEEN AUTHORIZED. ^save("accesscode",<cap>)
+
++ what is my access code
+- {keep} ^accessCode()
+
 + request clarification on science inability to neutralize alien
 - UNABLE TO CLARIFY
 
@@ -16,11 +28,12 @@
         + *
         % NO FURTHER ENHANCEMENT SPECIAL ORDER 937 SCIENCE OFFICER EYES ONLY
         - COMMAND NOT RECOGNIZED
-+ when is the sun coming up
-- ^getSunrise()
-+ set timer *1
-- ^setDestruct(<cap>)
-+ decipher transmission
-- will do
-+ any suggestions
-- still collating
+< topic
+
+> topic selfdestruct
+    + set timer *1
+    - ^setDestruct(<cap>)
+
+    + I've turned all the cooling units back on
+    - TOO LATE FOR REMEDIAL ACTION. THE CORE HAS BEGUN TO MELT.
+< topic

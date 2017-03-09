@@ -10,11 +10,23 @@ exports.setDestruct= function setDestruct(tm, cb) {
         // there is the possibility that this code can cause strange behaviors by forking the conversation
         // also watch for a potential memory leak
         // thanks to @silentrob and @benhjames for all their help
-        // TODO: handle error if the user session doesn't exist anymore
         that.bot.directReply(that.user.id,"sometopic", "SOMETHING", function(err, reply) {
-            var response = 'THE SHIP WILL DETONATE IN T MINUS '+millisToMinutesAndSeconds(time)+' MINUTES.';
-            that.extraScope.ws.write(`\n> ${response}\n`);
-            that.extraScope.ws.write('> ');
+            var response = '';
+            if (time > 0) {
+                response = 'ATTENTION. ENGINES WILL OVERLOAD IN '+millisToMinutesAndSeconds(time)+' MINUTES.';
+                // handle error if the user session doesn't exist anymore
+                try {
+                    that.extraScope.ws.write(`\n> ${response}\n`);
+                    that.extraScope.ws.write('> ');
+                }
+                catch (e) {
+                    console.log('Message not posted. User has disconnected.\n');
+                }
+            }
+            else {
+                response = 'ENGINES OVERLOADED.'
+                that.extraScope.ws.write(`\n> ${response}\n`);
+            }
         });
     });
     timer.start();

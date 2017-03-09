@@ -20,6 +20,7 @@ const botHandle = function botHandle(err, bot) {
     }
 
     // Use the remoteIP as the name since the PORT changes on ever new connection.
+    // NOTE: I modified the reply to add the socket so that my plugin would have access to it
     bot.reply(socket.remoteAddress, message.trim(), (err, reply) => {
       // Find the right socket
       const i = sockets.indexOf(socket);
