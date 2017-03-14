@@ -3,8 +3,6 @@
 import net from 'net';
 import superscript from 'superscript';
 
-var countdown = require('node-timers/countdown');
-
 const sockets = [];
 
 const botHandle = function botHandle(err, bot) {
