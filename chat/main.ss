@@ -1,5 +1,10 @@
 > topic random
-+ when is the sun coming up
++ {ordered} decode transmission
+- UNIDENTIFIED.
+- NOT A LANGUAGE.
+- INITIAL READINGS INDICATE THAT COMMUNICATION IS A WARNING
+
++ (when|what time) is the sun coming up
 - ^getSunrise()
 < topic
 
@@ -7,7 +12,7 @@
 + access code *1
 -  COMMAND PRIORITY ACCESS ONLY. YOUR ACCESS CODE HAS BEEN AUTHORIZED. ^save("accesscode",<cap>)
 
-+ what is my access code
++ what is my [god damn] (access code|key)
 - {keep} ^accessCode()
 
 + request clarification on science inability to neutralize alien

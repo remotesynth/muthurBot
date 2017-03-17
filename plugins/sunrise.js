@@ -1,6 +1,5 @@
 const http = require('http');
 exports.getSunrise = function getSunrise(cb) {
-    var ip = "";
     getLocation(cb);
 }
 
