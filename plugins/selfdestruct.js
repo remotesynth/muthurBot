@@ -6,28 +6,25 @@ exports.setDestruct= function setDestruct(tm, cb) {
     }),
     that = this;
     timer.on('poll', function(time) {
-        // this is experimental. I am calling superscript's directReply method to push a reply to the user on a new topic
-        // there is the possibility that this code can cause strange behaviors by forking the conversation
-        // also watch for a potential memory leak
+        // this is experimental. I am calling the websocket passed to send a reply to the user
+        // watch for a potential memory leak
         // thanks to @silentrob and @benhjames for all their help
-        that.bot.directReply(that.user.id,"sometopic", "SOMETHING", function(err, reply) {
-            var response = '';
-            if (time > 0) {
-                response = 'ATTENTION. ENGINES WILL OVERLOAD IN '+millisToMinutesAndSeconds(time)+' MINUTES.';
-                // handle error if the user session doesn't exist anymore
-                try {
-                    that.extraScope.ws.write(`\n> ${response}\n`);
-                    that.extraScope.ws.write('> ');
-                }
-                catch (e) {
-                    console.log('Message not posted. User has disconnected.\n');
-                }
-            }
-            else {
-                response = 'ENGINES OVERLOADED.'
+        var response = '';
+        if (time > 0) {
+            response = 'ATTENTION. ENGINES WILL OVERLOAD IN '+millisToMinutesAndSeconds(time)+' MINUTES.';
+            // handle error if the user session doesn't exist anymore
+            try {
                 that.extraScope.ws.write(`\n> ${response}\n`);
+                that.extraScope.ws.write('> ');
             }
-        });
+            catch (e) {
+                console.log('Message not posted. User has disconnected.\n');
+            }
+        }
+        else {
+            response = 'ENGINES OVERLOADED.'
+            that.extraScope.ws.write(`\n> ${response}\n`);
+        }
     });
     timer.start();
     cb(null,'THE EMERGENCY DESTRUCT SYSTEM IS NOW ACTIVATED. THE SHIP WILL DETONATE IN T MINUS ' + tm + ':00 MINUTES.')
